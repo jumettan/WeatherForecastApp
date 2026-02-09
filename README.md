@@ -1,2 +1,3 @@
-# WeatherForecastApp
-Check the weather forecast for the next 5 days for any city with this app
+npm i
+npm i @mui/material @mui/icons-material @emotion/react @emotion/styled
+npm run dev
