@@ -40,18 +40,37 @@
 /*Weather Info ->*/
 
 .weather-info{
-    border: solid;
+    
 }
-
-.locationDate-info{
+.locationDate-container{
     display: flex;
-    gap: 10px;
-    position: relative;
-    padding: 10px 15px;
+    justify-content: space-between;
+    text-align: center;
 }
-.location{
-
+.location-info{
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
-.datetime{
-
+.locationOn{
+    display: inherit;
+}
+.dateAndtime{
+    display: flex;
+    align-items: center;
+}
+.weather-summary{
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 150px;
+    border: solid green;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.temperature{
+    font-size: 45px;
+}
+.weather-desc{
+    font-size: 25px;
 }

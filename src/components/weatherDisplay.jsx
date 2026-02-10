@@ -14,16 +14,18 @@ function WeatherDisplay () {
                 </button>
             </header>
             <section className='weather-info'>
-                <div className="locationDate-info">
-                    <span><LocationOn/></span>
-                    <h3 className="location">Tampere</h3>
-                    <h4 className="datetime">Mon, 09 Feb</h4>
+                    <div className="locationDate-container">
+                        <div className="location-info">
+                        <span className='locationOn'><LocationOn/></span>
+                        <h3 className="location-name">Tampere</h3>
+                    </div>
+                    <h4 className="dateAndtime">Mon, 09 Feb</h4>
                 </div>
-                <div className='TemperatureWeather-info'>
-                        <img src="" alt="Weather Image" />
+                <div className="weather-summary">
+                    <img src="" alt="IMG" />
                     <div>
-                            <h3 className='temperature'>30*C</h3>
-                         <h4 className='weatherType'>Clouds</h4>
+                        <h1 className='temperature'>29*</h1>
+                        <h3 className='weather-desc'>Clouds</h3>
                     </div>
                 </div>
             </section>
