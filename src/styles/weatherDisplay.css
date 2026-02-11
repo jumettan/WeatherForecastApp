@@ -40,7 +40,7 @@
 /*Weather Info ->*/
 
 .weather-info{
-    
+    font-weight: 0;
 }
 .locationDate-container{
     display: flex;
@@ -60,17 +60,91 @@
     align-items: center;
 }
 .weather-summary{
-    margin-top: 10px;
-    padding-top: 10px;
-    height: 150px;
-    border: solid green;
+    padding: 10px 15px;
     text-align: center;
+    justify-content: center;
     display: flex;
     justify-content: space-between;
 }
+.weather-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.temp-weth{
+    margin-top: 5px;
+}
 .temperature{
-    font-size: 45px;
+    margin-top: 10px;
+    font-weight:500;
+    font-size: 27px;
 }
 .weather-desc{
-    font-size: 25px;
+    font-weight: lighter;
+    font-weight: 300;
+}
+.weather-conditions-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12.5px;
+}
+.condition-item{
+    text-align: center;
+    display: flex;
+    gap: 6px;
+}
+.humid{
+    display: flex;
+    text-align: left;
+}
+.condtition-item span{
+font-size: 30px;
+}
+.condition-info {
+    text-align: left;
+}
+.condition-info h3{
+    font-weight:lighter;
+    font-weight: 300;
+}
+
+/*future weather grid */
+
+.next-days-info{
+    text-align: center;
+    height: 150px;
+    width: auto;
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    place-items: center;
+    gap: 0px;
+    width: 100px;
+    border-radius: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.15), rgb(255,255,255,0.15));
+    backdrop-filter: blur(15px);
+    z-index: 2;
+}
+.slide h3{
+    font-weight: lighter;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.slide img{
+    padding-top: 0px;
+    width: 50px;
+    height: 50px;
+}
+.slide h4{
+    font-weight: lighter;
+    font-weight: 500;
+    font-size: 20px;
 }
