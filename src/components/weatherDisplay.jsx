@@ -6,21 +6,23 @@ import WeatherSlides from './WeatherSlides'
 import '../styles/weatherDisplay.css'
 import { useState } from 'react'
 
-function WeatherDisplay () {
-    
-    const [city, setCity] = useState(null);
+function WeatherDisplay() {
+    const [inputCity, setInputCity] = useState ('');
+    const [city, setCity] = useState('');
+    const showWeather = city.trim().toLowerCase() === 'tampere';
     return (
         <div className="main-container">
             <header className="input-container">
-                <input type="text" placeholder="Search City" className="searchbar" />
-                <button className="search-button">
+                <input type="text" placeholder="Search City" className="searchbar" value={inputCity} onChange={(e) => setInputCity (e.target.value)} />
+                <button className="search-button" onClick={() => setCity(inputCity)}>
                     <SearchIcon />
                 </button>
             </header>
+            {showWeather ? (
             <section className='weather-info'>
-                    <div className="locationDate-container">
-                        <div className="location-info">
-                        <span className='locationOn'><LocationOn/></span>
+                <div className="locationDate-container">
+                    <div className="location-info">
+                        <span className='locationOn'><LocationOn /></span>
                         <h3 className="location-name">Tampere</h3>
                     </div>
                     <h4 className="dateAndtime">Mon, 09 Feb</h4>
@@ -41,7 +43,7 @@ function WeatherDisplay () {
                         </div>
                     </div>
                     <div className='condition-item'>
-                        <span><Air/></span>
+                        <span><Air /></span>
                         <div className="condition-info">
                             <h3 className='text'>Wind Speed</h3>
                             <h4 className="">2.12M/s</h4>
@@ -49,9 +51,14 @@ function WeatherDisplay () {
 
                     </div>
                 </div>
-                    <WeatherSlides />
+                <WeatherSlides />
             </section>
-        </div>
+        ) : ( 
+            <div className="no-city-info">
+                <p>Search for a city to update the forecast</p>
+            </div>
+            
+        )}</div>
     )
 }
 
