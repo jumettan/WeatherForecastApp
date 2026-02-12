@@ -6,7 +6,7 @@
     border-radius: 10px;
 }
 .grid-container::-webkit-scrollbar-track{
-    background-color: green;
+    background-color: rgb(0, 0, 0 , 0.15);
 }
 .grid-container{
     justify-content: flex-start;

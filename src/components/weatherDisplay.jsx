@@ -4,9 +4,11 @@ import WaterDrop from '@mui/icons-material/WaterDrop'
 import Air from '@mui/icons-material/Air'
 import WeatherSlides from './WeatherSlides'
 import '../styles/weatherDisplay.css'
+import { useState } from 'react'
 
 function WeatherDisplay () {
-
+    
+    const [city, setCity] = useState(null);
     return (
         <div className="main-container">
             <header className="input-container">
