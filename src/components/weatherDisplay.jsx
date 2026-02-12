@@ -2,7 +2,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import LocationOn from '@mui/icons-material/LocationOn'
 import WaterDrop from '@mui/icons-material/WaterDrop'
 import Air from '@mui/icons-material/Air'
-
+import WeatherSlides from './WeatherSlides'
 import '../styles/weatherDisplay.css'
 
 function WeatherDisplay () {
@@ -47,16 +47,7 @@ function WeatherDisplay () {
 
                     </div>
                 </div>
-
-                <div className="next-days-info">
-                    <div className="grid-container">
-                        <div className='slide'>
-                            <h3 className='date'>Feb 13</h3>
-                            <img src="src/assets/rainy.svg" alt="rainy" />
-                            <h4 className='temperature'>25 °C</h4>
-                        </div>                    
-                    </div>
-                </div>
+                    <WeatherSlides />
             </section>
         </div>
     )
