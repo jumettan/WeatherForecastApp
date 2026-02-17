@@ -32,8 +32,8 @@ function weatherSlides() {
     <>
             <div className="grid-container">
                 {weathers.map(weathers=> (
-                    <div className="grid-item">
-                        <div className='slide' key={weathers.id}>
+                    <div className="grid-item" key={weathers.id}>
+                        <div className='slide'>
                             <h3 className='date'>{weathers.date}</h3>
                             <img src={weathers.img} alt="weather" />
                         <h4 className='temperature'>{weathers.temp}</h4>

@@ -1,42 +1,4 @@
-.main-container{
-    justify-content: center;
-    width: 300px;
-    height: 496px;
-    border-radius: 12px;
-    z-index: 1;
-    background: linear-gradient(rgb(0,0,0, 0.15), rgb(255,255,255,0.15));
-    backdrop-filter: blur(15px);
-    padding: 20px;
-}
-.input-container{
-    position: relative;
-    margin-bottom: 20px;
-}
-.searchbar{
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 99px;
-    border: 3px;
-    outline: none;
-    background: rgb(0, 0, 0, 0.15);
-}
-.searchbar::placeholder{
-    color: aliceblue;
-}
-.search-button{
-    position: absolute;
-    background: none;
-    transform: translateY(-50%);
-    right: 10px;
-    top: 50%;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    transition: 0.2s;
-}
-.search-button:hover{
-    color: red;
-}
+
 /*Weather Info ->*/
 
 .weather-info{

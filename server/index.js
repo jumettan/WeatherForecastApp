@@ -2,6 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
 const e = require('express');
+
 require ('dotenv').config();
 
 const app = express();
@@ -15,12 +16,14 @@ app.get('/api/weather', async (req,res)=>{
     try{
         const response = await fetch(
             `http://api.weatherapi.com/v1/forecast.json?key=${process.env.API_KEY}&q=${city}&days=7`
+            
         );
         if(!response.ok){
             console.log("Weather API respond status: " , response.status);
             return res.status(response.status).json({error : 'failed to fetch from server. '});
         }
         const data = await response.json();
+        console.log('Fetched weather data:', data);
         res.json(data)
     } catch(e){
         console.error("Weather API Error: ", e)
