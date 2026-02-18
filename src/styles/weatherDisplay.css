@@ -17,6 +17,9 @@
 .locationOn{
     display: inherit;
 }
+.location-name{
+    font-size: ;
+}
 .dateAndtime{
     display: flex;
     align-items: center;

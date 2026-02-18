@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   justify-content: center;
+    font-size: clamp(0.95rem, 1.0vw, 1.0rem);
 }
 body {
   background: url(../assets/wp5837647-spring-japan-wallpapers.jpg);
@@ -61,4 +62,12 @@ body::before {
 }
 .search-button:hover{
     color: red;
+}
+
+.placeholder-message {
+  color: aliceblue;
+  text-align: center;
+  margin-top: 140px;
+  font-size: 16px;
+  font-weight: 500;
 }

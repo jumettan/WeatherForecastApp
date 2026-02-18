@@ -7,11 +7,12 @@ import { useEffect } from 'react';
 import { getWeatherData } from './api';
 
 function App() {
-  const [city, setCity] = useState('Helsinki');
+  const [city, setCity] = useState('');
     const[searchValue, setSearchValue] = useState('')
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('')
     const [weatherData, setWeatherData] = useState(null)
+    const [hasSearched, setHasSearched] = useState(false)
 
     useEffect(() => {
       const fetchWeather = async () => {
@@ -51,14 +52,22 @@ function App() {
         <div className="main-container">
             <header className="input-container">
                 <input type="text" placeholder="Search City" className="searchbar" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
-                <button className="search-button" onClick={() => setCity(searchValue.trim())}>
+                <button className="search-button" onClick={() => {
+                    const trimmedValue = searchValue.trim();
+                    if(!trimmedValue) return;
+                      setHasSearched(true);
+                      setCity(trimmedValue);
+                  }}>
                     <SearchIcon />
                 </button>
             </header>
             {loading && <p>Loading weather...</p>}
             {error && <p>{error}</p>}
+            {!hasSearched && !loading && !error && (
+              <p className="placeholder-message">Search city to get weather information for any city</p>
+            )}
             {weatherData && <WeatherDisplay data={weatherData.current} location={weatherData.location} />}
-            <WeatherSlides />
+            {weatherData && <WeatherSlides data={weatherData.weekly} />}
         </div>
     </>
   )
